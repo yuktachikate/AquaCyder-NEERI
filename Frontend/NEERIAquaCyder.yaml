@@ -1,0 +1,524 @@
+modules: []
+exported_table_schema: []
+services: []
+forms:
+- is_package: true
+  container:
+    type: HtmlTemplate
+    properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+      role: null, html: '@theme:standard-page.html'}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: content_panel
+    layout_properties: {slot: default}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Select the Reserviour, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'EDRAQI,UNTWIR'}
+    - type: DropDown
+      properties:
+        role: null
+        align: full
+        tooltip: ''
+        placeholder: 'Select State '
+        border: ''
+        enabled: true
+        foreground: ''
+        items: []
+        visible: true
+        font_size: null
+        font: ''
+        spacing_above: small
+        spacing_below: small
+        italic: false
+        background: ''
+        bold: false
+        underline: false
+        include_placeholder: true
+      name: drop_down_2
+      layout_properties: {grid_position: 'HKWWLF,CBUEOA'}
+      event_bindings: {show: drop_down_2_show}
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Apply  State  Filter, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_5
+      layout_properties: {grid_position: 'HKWWLF,DSPOTY'}
+      event_bindings: {click: button_5_click}
+    - type: DropDown
+      properties:
+        role: null
+        align: full
+        tooltip: Select he reserviour name from drop down menu
+        placeholder: Select  Reserviour
+        border: ''
+        enabled: true
+        foreground: ''
+        items: []
+        visible: true
+        font_size: null
+        font: ''
+        spacing_above: small
+        spacing_below: small
+        italic: false
+        background: ''
+        bold: false
+        underline: false
+        include_placeholder: true
+      name: drop_down_1
+      layout_properties: {grid_position: 'OXIINT,JKCEOQ'}
+      event_bindings: {show: drop_down_1_show}
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Submit rESERVIOUR, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_1
+      layout_properties: {grid_position: 'TCWFXB,YQPAZE'}
+      event_bindings: {click: button_1_click}
+    - type: DatePicker
+      properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: Enter the starting date here,
+        placeholder: Starting Date, border: '', enabled: true, foreground: '', visible: true,
+        font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+        date: '', min_date: '', background: '', bold: false, underline: false, format: ''}
+      name: date_picker_1
+      layout_properties: {grid_position: 'ERPQGU,DSNLMF'}
+    - type: Button
+      properties: {role: null, align: center, tooltip: Click to submit start date,
+        border: '', enabled: true, foreground: '', visible: true, text: '    sUBMIT
+          sTART DATE', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: button_2
+      layout_properties: {grid_position: 'ERPQGU,BFROXQ'}
+      event_bindings: {click: button_2_click}
+    - type: DatePicker
+      properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: Enter the ending date here,
+        placeholder: Ending Date, border: '', enabled: true, foreground: '', visible: true,
+        font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+        date: '', min_date: '', background: '', bold: false, underline: false, format: ''}
+      name: date_picker_2
+      layout_properties: {grid_position: 'QHLWHH,LYBESF'}
+    - type: Button
+      properties: {role: null, align: center, tooltip: Click to submit end date, border: '',
+        enabled: true, foreground: '', visible: true, text: sUBMIT END DATE, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_3
+      layout_properties: {grid_position: 'QHLWHH,JRMGJB'}
+      event_bindings: {click: button_3_click}
+    - type: Label
+      properties: {}
+      name: label_2
+      layout_properties: {grid_position: 'UREKBF,TKNNMJ'}
+    - type: Canvas
+      properties: {role: null, height: '400', tooltip: '', border: '', foreground: '',
+        visible: true, spacing_above: small, spacing_below: small, background: ''}
+      name: canvas_1
+      layout_properties: {grid_position: 'BBQLKV,XDAZXW'}
+    - type: Canvas
+      properties: {role: null, height: '700', tooltip: '', border: '', foreground: '',
+        visible: true, spacing_above: small, spacing_below: small, background: ''}
+      name: canvas_2
+      layout_properties: {grid_position: 'BIOUPD,KKJZMV'}
+    - type: Canvas
+      properties: {role: null, height: '700', tooltip: '', border: '', foreground: '',
+        visible: true, spacing_above: small, spacing_below: small, background: ''}
+      name: canvas_3
+      layout_properties: {grid_position: 'ZAQRHV,GDMMER'}
+    - type: Canvas
+      properties: {role: null, height: '400', tooltip: '', border: '', foreground: '',
+        visible: true, spacing_above: small, spacing_below: small, background: ''}
+      name: canvas_4
+      layout_properties: {grid_position: 'NMOZTB,JNHDPX'}
+    - type: Canvas
+      properties: {role: null, height: '400', tooltip: '', border: '', foreground: '',
+        visible: true, spacing_above: small, spacing_below: small, background: ''}
+      name: canvas_5
+      layout_properties: {grid_position: 'ZACLIX,TGOKFE'}
+  - type: FlowPanel
+    properties: {}
+    name: navbar_links
+    layout_properties: {slot: nav-right}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: NEERI AquaCyder, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_3
+    layout_properties: {slot: title}
+  code: "from ._anvil_designer import Form1Template\nfrom anvil import *\nimport anvil.server\n\
+    import datetime\nimport anvil.media\n\n\nclass Form1(Form1Template):\n  global\
+    \ res\n  \n  res =[]\n  \n\n  def __init__(self, **properties):\n    # Set Form\
+    \ properties and Data Bindings.\n    self.init_components(**properties)\n\n\n\
+    \  def drop_down_1_show(self, **event_args):\n    \"\"\"This method is called\
+    \ when the DropDown is shown on the screen\"\"\"\n    self.drop_down_1.items=['Ahraura',\
+    \ 'Alandi', 'Aliyar', 'Almatti', 'Alwandi', 'Amaravathy', 'Amarja', 'Ambazari',\
+    \ 'Ambiligola Tank', 'Aner', 'Anjanapura Tank', 'Aoda', 'Arunawati', 'Asolamandha',\
+    \ 'Avalanche', 'Badua', 'Baigul', 'Balimela', 'Bango', 'Bansagar Dam', 'Bargi',\
+    \ 'Barna', 'Bennithora', 'Bhadar', 'Bhadra', 'Bhainsora','Bhakra Dam', 'Bhandardari',\
+    \ 'Bhatghar', 'Bhavanisagar', 'Bhonka', 'Bisalpur', 'Bodalkasa', 'Bor', 'Bori',\
+    \ 'Budhabudiani', 'Buggavagu', 'Canimuthar', 'Chakra', 'Chandan', 'Chandil', 'Chandpur',\
+    \ 'Chandra Prabha', 'Chargaon', 'Chhapi', 'Chhilar', 'Chhirpani', 'Chimoni', 'Chorkhamara',\
+    \ 'Darna', 'Dejla Dewda', 'Dhamni', 'Dhekwan', 'Dholawad', 'Dhom', 'Dimbhe', 'Dindi',\
+    \ 'Dudhawa', 'Ekrukh', 'Emerald', 'Erai', 'Farakka', 'Gajuladinne', 'Gandhi Sagar',\
+    \ 'Gangapur', 'Gangau', 'Gazaldova', 'Ghod', 'Ghunghuta', 'Girna', 'Gohira', 'Govind\
+    \ Sagar', 'Govindgarh', 'Gudha', 'Gumti', 'H.B. Hally Pickup', 'Halali', 'Hariharjore',\
+    \ 'Haripura', 'Harsi', 'Hathaikheda', 'Hatnur', 'Hebbahalla', 'Hemavathy', 'Hemawas',\
+    \ 'Hesaraghatta Reservoir', 'Hidkal', 'Himayat Sagar', 'Hingoni', 'Hipparagi Barrage',\
+    \ 'Hirakud', 'Idukki', 'Isapur', 'Jai Samand', 'Jakapur', 'Jakham Main Dam', 'Jalaput',\
+    \ 'Jalleru', 'Jamni', 'Jangamhatti', 'Jawalgaon', 'Jayakwadi Stage 1', 'Jirgo',\
+    \ 'Jurala', 'Kabini', 'Kadana', 'Kaddam', 'Kadra', 'Kadwa', 'Kaketo', 'Kakrapar',\
+    \ 'Kalamwadi', 'Kaliasote', 'Kalisil', 'Kallada', 'Kanerwadi', 'Kangsabati Kumari',\
+    \ 'Kanhargaon', 'Kanheinalla', 'Karanja', 'Karanjikhed', 'Kasari', 'Kerwan', 'Khandong',\
+    \ 'Khapa', 'Khapri', 'Kharkhara Tank', 'Kharung', 'Khuga', 'Kinnersani', 'Kodar',\
+    \ 'Kodasalli', 'Koil Sagar', 'Kolar', 'Konar', 'Kotabarrage', 'Kotwal', 'Koyna',\
+    \ 'Krisharaja Sagar', 'Kudirayar', 'Kumhari', 'Kundlika', 'Lakhnavaram', 'Lankasagar',\
+    \ 'Large Tank Bayya', 'Linganamakki', 'Lower Karjan', 'Lower Khajuri', 'Lower\
+    \ Manair', 'Machhannala', 'Madhuban', 'Mahan', 'Mahanadi', 'Mahi', 'Maithon',\
+    \ 'Majalgaon', 'Majhgawan', 'Mala', 'Malampuzha', 'Malaprabha', 'Mandira', 'Mangalam',\
+    \ 'Mangla', 'Mangrul', 'Mani', 'Manikdoh', 'Maniyari', 'Manjalar', 'Manjara',\
+    \ 'Maralvadi', 'Maroda Tank', 'Massanjore', 'Matatila', 'Matiyari', 'Maudaha',\
+    \ 'Mehgaon Tolla', 'Meja', 'Mettur', 'Mhaswad', 'Mukurthi', 'Mula', 'Mulshi Lake',\
+    \ 'Murumsilli', 'Musa Khand', 'Musi', 'Nagarjuna Sagar', 'Nal Tank', 'Nalkari',\
+    \ 'Nallavagu', 'Nanak Sagar', 'Nangal Dam', 'Narayanapura', 'Narihalla', 'Naugarh',\
+    \ 'Ner', 'Nizam Sagar', 'North Koel', 'Nugu', 'Orni', 'Osman Sagar', 'Ozarkhed',\
+    \ 'Pagara', 'Pahuj', 'Pakhal', 'Palair', 'Palar Porandala', 'Palkhed', 'Panchana',\
+    \ 'Panchet Hill', 'Parambikulam', 'Pariat', 'Paricha', 'Pathari', 'Pathkhauli',\
+    \ 'Pedgaon', 'Peechi', 'Periyar', 'Peruvaripallam', 'Phophali', 'Phuwaria', 'Pillowa',\
+    \ 'Pimpalgaon Joga', 'Pocharam', 'Pong Dam', 'Porthimund', 'Pothundy', 'Pujaritola',\
+    \ 'Pykara', 'Radhanagari', 'Rajghat', 'Rajsamand', 'Ramappa', 'Ramganga', 'Ramiala',\
+    \ 'Ramtek', 'Rana Pratap Sagar', 'Rangawan', 'Ravishankar Sagar', 'Remal', 'Rihand',\
+    \ 'Rohini', 'Rukka', 'Ruthiai', 'Sagar', 'Sajnam', 'Salal', 'Salandi', 'Salia',\
+    \ 'Saprar', 'Sarathi', 'Sarda Sagar', 'Sardar Sarovar', 'Saroda', 'Sathnala',\
+    \ 'Savehakkalu', 'Shahjad', 'Shetrunji', 'Sholayar', 'Siddheshwar', 'Sijar', 'Sikasar',\
+    \ 'Sindhwarni', 'Singur', 'Sirsi', 'Somasila', 'Sondur', 'Sriram Sagar', 'Srisailam',\
+    \ 'Suki', 'Sundar', 'Supa', 'Talakalale', 'Tandula', 'Taraka', 'Tawa', 'Tehri',\
+    \ 'Tenughat', 'Terna', 'Thakurwadi', 'Thanwar', 'Thein Dam', 'Thirumoorthy', 'Thonnur\
+    \ Tank', 'Tigra', 'Tilaiya', 'Tillar', 'Totladoh', 'Tulshi', 'Tumaria', 'Tunacadavu',\
+    \ 'Tunga Anicut', 'Tungabhadra', 'Ujani', 'Ukai', 'Umiam', 'Umrong', 'Upper Bhavani',\
+    \ 'Upper Indrawati', 'Upper Jonk', 'Upper Khajuri', 'Upper Kolab', 'Upper Manair',\
+    \ 'Upper Wain Ganga', 'Upper Wardha', 'Urmil', 'Vaigai', 'Vaitarna', 'Vani Vilasa\
+    \ Sagar', 'Varahi Pickup', 'Vir Baji Pasalkar', 'Vir Baji Pasalkar', 'Wadaj',\
+    \ 'Wadgaon', 'Wadhwana', 'Walayar', 'Willingdon', 'Wunna', 'Wyra', 'Yedgaon',\
+    \ 'Yeldari', 'Yerrakalva']\n    \n    pass\n  def drop_down_2_show(self, **event_args):\n\
+    \    \"\"\"This method is called when the DropDown is shown on the screen\"\"\"\
+    \n    self.drop_down_2.items= [ 'Andhra Pradesh', 'Assam', 'Bihar','Chhattisgarh',\
+    \ 'Gujarat', 'Himachal Pradesh', 'Jammu and Kashmir','Jharkhand', 'Karnataka',\
+    \ 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Orissa',\
+    \ 'Punjab', 'Rajasthan', 'Tamil Nadu', 'Telangana','Tripura', 'Uttar Pradesh',\
+    \ 'West Bengal','Show All']\n    \n    pass  \n\n  def button_5_click(self, **event_args):\n\
+    \    \"\"\"This method is called when the button is clicked\"\"\"\n    argument=self.drop_down_2.selected_value\n\
+    \    if argument=='Kerala':\n     self.drop_down_1.items= ['Chimoni', 'Idukki',\
+    \ 'Mala', 'Malampuzha', 'Mangalam', 'Peechi', 'Periyar', 'Pothundy', 'Walayar']\n\
+    \    if argument=='Andhra Pradesh':\n      self.drop_down_1.items=['Balimela',\
+    \ 'Buggavagu', 'Dindi', 'Gajuladinne', 'Himayat Sagar', 'Jalleru', 'Jurala', 'Kaddam',\
+    \ 'Kinnersani', 'Koil Sagar', 'Lakhnavaram', 'Lankasagar', 'Large Tank Bayya',\
+    \ 'Lower Manair', 'Musi', 'Nagarjuna Sagar', 'Nallavagu', 'Nizam Sagar', 'Osman\
+    \ Sagar', 'Pakhal', 'Palair', 'Pocharam', 'Ramappa', 'Sathnala', 'Singur', 'Somasila',\
+    \ 'Sriram Sagar', 'Srisailam', 'Upper Manair', 'Wyra', 'Yerrakalva']\n    if argument=='Karnataka':\n\
+    \      \n      self.drop_down_1.items=['Hesaraghatta Reservoir','Tunga Anicut','Malaprabha','Narayanapura','Kadra','Kodasalli','Supa','Hidkal','Talakalale',\
+    \ 'Linganamakki', 'Chakra', 'Savehakkalu', 'Amarja', 'Bennithora', 'Almatti',\
+    \ 'Tungabhadra', 'H.B. Hally Pickup', 'Narihalla', 'Ambiligola Tank', 'Anjanapura\
+    \ Tank', 'Vani Vilasa Sagar', 'Bhadra', 'Varahi Pickup', 'Mani', 'Hemavathy',\
+    \ 'Thonnur Tank', 'Maralvadi', 'Krisharaja Sagar', 'Hebbahalla', 'Taraka', 'Nugu',\
+    \ 'Kabini', 'Hipparagi Barrage']\n    \n    if argument=='Punjab':\n      self.drop_down_1.items=\
+    \ ['Mangla', 'Thein Dam']\n    if argument=='Uttar Pradesh':\n      self.drop_down_1.items=['Rihand','Tehri',\
+    \ 'Ramganga', 'Tumaria', 'Haripura', 'Nanak Sagar', 'Baigul', 'Sarda Sagar', 'Pathkhauli',\
+    \ 'Maudaha', 'Paricha', 'Pahuj', 'Sijar', 'Saprar', 'Dhekwan', 'Urmil', 'Matatila',\
+    \ 'Lower Khajuri', 'Jirgo', 'Ahraura', 'Upper Khajuri', 'Musa Khand', 'Shahjad',\
+    \ 'Chandra Prabha', 'Bhonka', 'Naugarh', 'Sirsi', 'Bhainsora', 'Rajghat', 'Rangawan',\
+    \ 'Govind Sagar', 'Gangau', 'Sajnam', 'Rohini', 'Pathari']\n    if argument=='Himachal\
+    \ Pradesh':\n      self.drop_down_1.items=['Nangal Dam','Pong Dam','Bhakra Dam']\n\
+    \    if argument=='Rajasthan':\n      self.drop_down_1.items=['Chhapi','Bisalpur','Hemawas','Meja',\
+    \ 'Rajsamand', 'Jai Samand', 'Jakham Main Dam', 'Panchana', 'Kalisil', 'Gudha',\
+    \ 'Kotabarrage', 'Rana Pratap Sagar']\n    if argument=='West Bengal':\n     \
+    \ self.drop_down_1.items=['Farakka','Gazaldova','Massanjore', 'Kangsabati Kumari']\n\
+    \    if argument=='Orissa':\n      self.drop_down_1.items=['Jalaput','Mandira',\
+    \ 'Hirakud', 'Gohira', 'Salandi', 'Remal', 'Ramiala', 'Hariharjore', 'Upper Jonk',\
+    \ 'Budhabudiani', 'Salia', 'Upper Indrawati', 'Upper Kolab']\n    if argument=='Assam':\n\
+    \      self.drop_down_1.items=['Khandong', 'Umrong']\n    if argument=='Madhya\
+    \ Pradesh':\n      self.drop_down_1.items=['Sarathi','Bansagar Dam','Jamni','Majhgawan','Nal\
+    \ Tank', 'Dholawad', 'Kotwal', 'Pillowa', 'Pagara', 'Aoda', 'Tigra', 'Kaketo',\
+    \ 'Harsi', 'Gandhi Sagar', 'Ruthiai', 'Govindgarh', 'Sagar', 'Tillar', 'Halali',\
+    \ 'Chhilar', 'Hathaikheda', 'Pariat', 'Kaliasote', 'Kerwan', 'Mehgaon Tolla',\
+    \ 'Barna', 'Ghunghuta', 'Kolar', 'Bargi', 'Khapa', 'Thanwar', 'Tawa', 'Matiyari',\
+    \ 'Maniyari', 'Upper Wain Ganga', 'Chhirpani', 'Kanhargaon', 'Saroda', 'Dejla\
+    \ Dewda', 'Kumhari', 'Kodar', 'Maroda Tank', 'Mahanadi', 'Kharkhara Tank', 'Tandula',\
+    \ 'Ravishankar Sagar', 'Murumsilli', 'Sikasar', 'Mahan', 'Dudhawa', 'Sondur']\n\
+    \    if argument=='Jammu and Kashmir':\n      self.drop_down_1.items=['Salal']\
+    \  \n    if argument=='Manipur':\n      self.drop_down_1.items=['Khuga']\n   \
+    \ if argument=='Gujarat':\n      self.drop_down_1.items=['Madhuban','Shetrunji','Wadhwana','Mahi',\
+    \ 'Kadana', 'Machhannala', 'Sardar Sarovar', 'Bhadar', 'Lower Karjan', 'Kakrapar',\
+    \ 'Ukai']\n    if argument=='Tamil Nadu':\n      self.drop_down_1.items=['Willingdon','Kanheinalla','Canimuthar',\
+    \ 'Mettur', 'Bhavanisagar', 'Pykara', 'Mukurthi', 'Porthimund', 'Emerald', 'Avalanche',\
+    \ 'Upper Bhavani', 'Thirumoorthy', 'Aliyar', 'Peruvaripallam', 'Tunacadavu', 'Amaravathy',\
+    \ 'Kudirayar', 'Parambikulam', 'Palar Porandala', 'Sholayar', 'Manjalar', 'Vaigai']\n\
+    \    if argument=='Maharashtra':\n      self.drop_down_1.items=['Bori','Ujani','Kanerwadi','Kundlika','Khapri','Ambazari','Chorkhamara','Bodalkasa','Girna','Karanjikhed',\
+    \ 'Ozarkhed', 'Palkhed', 'Alandi', 'Gangapur', 'Dhamni', 'Alwandi', 'Darna', 'Kadwa',\
+    \ 'Vaitarna', 'Bhandardari', 'Mula', 'Pimpalgaon Joga', 'Manikdoh', 'Yedgaon',\
+    \ 'Wadaj', 'Dimbhe', 'Thakurwadi', 'Ghod', 'Mulshi Lake', 'Vir Baji Pasalkar',\
+    \ 'Bhatghar', 'Vir Baji Pasalkar', 'Dhom', 'Ner', 'Mhaswad', 'Koyna', 'Kasari',\
+    \ 'Tulshi', 'Radhanagari', 'Kalamwadi', 'Pedgaon', 'Jangamhatti', 'Totladoh',\
+    \ 'Chandpur', 'Ramtek', 'Mangrul', 'Aner', 'Suki', 'Upper Wardha', 'Wunna', 'Hatnur',\
+    \ 'Bor', 'Wadgaon', 'Pujaritola', 'Chargaon', 'Asolamandha', 'Arunawati', 'Erai',\
+    \ 'Isapur', 'Yeldari', 'Phophali', 'Siddheshwar', 'Jayakwadi Stage 1', 'Majalgaon',\
+    \ 'Manjara', 'Terna', 'Hingoni', 'Jawalgaon', 'Jakapur', 'Ekrukh']\n    if argument=='Bihar':\n\
+    \      self.drop_down_1.items=['Sindhwarni', 'Orni', 'Sundar', 'Badua', 'Chandan',\
+    \ 'Phuwaria', 'Tilaiya', 'Konar', 'Maithon', 'Tenughat', 'Panchet Hill', 'Nalkari',\
+    \ 'Rukka', 'North Koel']\n    if argument=='Tripura':\n      self.drop_down_1.items=['Gumti']\n\
+    \    if argument=='Meghalaya':\n      self.drop_down_1.items=['Umiam']\n    if\
+    \ argument=='Jharkhand':\n      self.drop_down_1.items=['Chandil']\n    if argument=='Chhattisgarh':\n\
+    \      self.drop_down_1.items=['Kharung','Bango']\n    if argument=='Telangana':\n\
+    \      self.drop_down_1.items=['Karanja']\n    \n    \n    pass\n\n  def button_1_click(self,\
+    \ **event_args):\n    \n    \"\"\"This method is called when the button is clicked\"\
+    \"\"\n    box=str(self.drop_down_1.selected_value)\n    dt=datetime.date.today()-datetime.timedelta(days=180)\
+    \  \n    self.date_picker_1.max_date=dt\n    \n    self.date_picker_1.date= DatePicker(format=\"\
+    %Y %m %d\")\n    self.date_picker_1.min_date=\"1990-01-01\"\n    res.append(box)\n\
+    \    return res\n  pass\n       \n  def button_2_click(self, **event_args):\n\
+    \     \"\"\"This method is called when the button is clicked\"\"\"\n    \n   \
+    \      \n     dott=DatePicker()\n     dott.date=self.date_picker_1.date\n    \
+    \ \n     if dott.date==None:\n        print(\"enter a valid date\")\n        \
+    \  \n          \n     \"\"\"This method is called when the DatePicker is shown\
+    \ on the screen\"\"\"\n     dt2=DatePicker()     \n     dt2=dott.date+datetime.timedelta(days=180)\n\
+    \     self.date_picker_2.min_date=dt2\n     dt3=datetime.date.today()\n     self.date_picker_2.max_date=dt3\n\
+    \     self.date_picker_2.date= DatePicker(format=\"%Y %m %d\")\n     res.append(dott.date)\n\
+    \     return res\n   \n  pass\n \n  def button_3_click(self, **event_args):\n\
+    \    \"\"\"This method is called when the button is clicked\"\"\"\n    dott2=DatePicker()\n\
+    \    dott2.date=self.date_picker_2.date\n    if dott2.date==None:      \n    \
+    \   print(\"enter a valid date\")\n    res.append(dott2.date)\n    boxx=res[0]\n\
+    \    s_date=str(res[1])\n    \n    e_date=str(res[2])\n    \n    print(s_date)\n\
+    \    print(e_date)\n    ss_date=\"'\"+s_date+\"'\"\n    \n    ee_date=\"'\"+e_date+\"\
+    '\"\n    \n    \n    res.clear()\n    self.label_2.text=\"The process is initiated.\
+    \ It may take few minutes\"\n    main_list=anvil.server.call('interface_show',boxx,ss_date,ee_date)\n\
+    \    print(type(main_list))\n    outline=main_list[0]\n    senti_img=main_list[1]\n\
+    \    ext_img=main_list[2]\n    gra_1=main_list[3]\n    gra_2=main_list[4]\n  \
+    \  \n    self.canvas_1.draw_image(outline,[0],[0],[800],[300])\n    self.canvas_2.draw_image(senti_img,[50],[0],[800],[500])\n\
+    \    self.canvas_3.draw_image(ext_img,[50],[0],[800],[500])\n    self.canvas_4.draw_image(gra_1,[0],[0],[800],[300])\n\
+    \    self.canvas_5.draw_image(gra_2,[0],[0],[800],[300]) \n    \n    pass\n  \
+    \  \n"
+  class_name: Form1
+package_name: NEERI_AquaCyder
+allow_embedding: false
+name: NEERI_AquaCyder
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
+metadata: {}
+startup_form: Form1
+db_schema: []
+dependency_order: []
+dependency_code: {}
+theme:
+  templates:
+  - name: Standard Page
+    description: A page with an app bar and an optional sidebar.
+    img: img/form-templates/material-design.png
+    form:
+      class_name: Form
+      is_package: true
+      container:
+        type: HtmlTemplate
+        properties: {html: '@theme:standard-page.html'}
+      components:
+      - type: ColumnPanel
+        properties: {}
+        name: content_panel
+        layout_properties: {slot: default}
+      - type: FlowPanel
+        properties: {}
+        name: navbar_links
+        layout_properties: {slot: nav-right}
+      code: "from ._anvil_designer import $NAME$Template\nfrom anvil import *\n\n\
+        class $NAME$($NAME$Template):\n\n  def __init__(self, **properties):\n   \
+        \ # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\
+        \n    # Any code you write here will run when the form opens.\n    \n"
+  parameters:
+    roles:
+    - name: text
+      components: [Label, Link]
+    - name: subheading
+      components: [Label]
+    - name: input-prompt
+      components: [Label]
+    - name: headline
+      components: [Label]
+      displayInToolbox: true
+      title: Headline
+      display_in_toolbox: true
+    - name: display-4
+      components: [Label]
+    - name: card
+      components: [ColumnPanel, LinearPanel, XYPanel, RepeatingPanel]
+      displayInToolbox: true
+      title: Card
+      display_in_toolbox: true
+    - name: raised
+      components: [Button, FileLoader]
+    - name: primary-color
+      components: [Button, FileLoader]
+      title: Highlighted Button
+      display_in_toolbox: true
+    - name: secondary-color
+      components: [Button, FileLoader]
+    - name: dense
+      components: [TextBox]
+    - name: selected
+      components: [Link]
+    color_scheme:
+      preset_groups:
+      - name: Primary Colour
+        options:
+        - name: Blue
+          colors:
+          - {name: Primary 500, color: '#2196F3'}
+          - {name: Primary 700, color: '#1976D2'}
+        - name: Orange
+          colors:
+          - {name: Primary 500, color: '#FF9800'}
+          - {name: Primary 700, color: '#F57C00'}
+        - name: Red
+          colors:
+          - {name: Primary 500, color: '#F44336'}
+          - {name: Primary 700, color: '#D32F2F'}
+        - name: Pink
+          colors:
+          - {name: Primary 500, color: '#E91E63'}
+          - {name: Primary 700, color: '#C2185B'}
+        - name: Purple
+          colors:
+          - {name: Primary 500, color: '#9C27B0'}
+          - {name: Primary 700, color: '#7B1FA2'}
+        - name: Deep Purple
+          colors:
+          - {name: Primary 500, color: '#673AB7'}
+          - {name: Primary 700, color: '#512DA8'}
+        - name: Indigo
+          colors:
+          - {name: Primary 500, color: '#3F51B5'}
+          - {name: Primary 700, color: '#303F9F'}
+        - name: Light Blue
+          colors:
+          - {name: Primary 500, color: '#03A9F4'}
+          - {name: Primary 700, color: '#0288D1'}
+        - name: Cyan
+          colors:
+          - {name: Primary 500, color: '#00BCD4'}
+          - {name: Primary 700, color: '#0097A7'}
+        - name: Teal
+          colors:
+          - {name: Primary 500, color: '#009688'}
+          - {name: Primary 700, color: '#00796B'}
+        - name: Green
+          colors:
+          - {name: Primary 500, color: '#4CAF50'}
+          - {name: Primary 700, color: '#388E3C'}
+        - name: Light Green
+          colors:
+          - {name: Primary 500, color: '#8BC34A'}
+          - {name: Primary 700, color: '#689F38'}
+        - name: Lime
+          colors:
+          - {name: Primary 500, color: '#CDDC39'}
+          - {name: Primary 700, color: '#AFB42B'}
+        - name: Deep orange
+          colors:
+          - {name: Primary 500, color: '#FF5722'}
+          - {name: Primary 700, color: '#E64A19'}
+        - name: Brown
+          colors:
+          - {name: Primary 500, color: '#795548'}
+          - {name: Primary 700, color: '#5D4037'}
+        - name: Grey
+          colors:
+          - {name: Primary 500, color: '#9E9E9E'}
+          - {name: Primary 700, color: '#616161'}
+      - name: Secondary Colour
+        options:
+        - name: Blue
+          colors:
+          - {name: Secondary 500, color: '#2196F3'}
+          - {name: Secondary 700, color: '#1976D2'}
+        - name: Orange
+          colors:
+          - {name: Secondary 500, color: '#FF9800'}
+          - {name: Secondary 700, color: '#F57C00'}
+        - name: Red
+          colors:
+          - {name: Secondary 500, color: '#F44336'}
+          - {name: Secondary 700, color: '#D32F2F'}
+        - name: Pink
+          colors:
+          - {name: Secondary 500, color: '#E91E63'}
+          - {name: Secondary 700, color: '#C2185B'}
+        - name: Purple
+          colors:
+          - {name: Secondary 500, color: '#9C27B0'}
+          - {name: Secondary 700, color: '#7B1FA2'}
+        - name: Deep Purple
+          colors:
+          - {name: Secondary 500, color: '#673AB7'}
+          - {name: Secondary 700, color: '#512DA8'}
+        - name: Indigo
+          colors:
+          - {name: Secondary 500, color: '#3F51B5'}
+          - {name: Secondary 700, color: '#303F9F'}
+        - name: Light Blue
+          colors:
+          - {name: Secondary 500, color: '#03A9F4'}
+          - {name: Secondary 700, color: '#0288D1'}
+        - name: Cyan
+          colors:
+          - {name: Secondary 500, color: '#00BCD4'}
+          - {name: Secondary 700, color: '#0097A7'}
+        - name: Teal
+          colors:
+          - {name: Secondary 500, color: '#009688'}
+          - {name: Secondary 700, color: '#00796B'}
+        - name: Green
+          colors:
+          - {name: Secondary 500, color: '#4CAF50'}
+          - {name: Secondary 700, color: '#388E3C'}
+        - name: Light Green
+          colors:
+          - {name: Secondary 500, color: '#8BC34A'}
+          - {name: Secondary 700, color: '#689F38'}
+        - name: Lime
+          colors:
+          - {name: Secondary 500, color: '#CDDC39'}
+          - {name: Secondary 700, color: '#AFB42B'}
+        - name: Deep orange
+          colors:
+          - {name: Secondary 500, color: '#FF5722'}
+          - {name: Secondary 700, color: '#E64A19'}
+        - name: Brown
+          colors:
+          - {name: Secondary 500, color: '#795548'}
+          - {name: Secondary 700, color: '#5D4037'}
+        - name: Grey
+          colors:
+          - {name: Secondary 500, color: '#9E9E9E'}
+          - {name: Secondary 700, color: '#616161'}
+      colors:
+      - {name: Primary 500, color: '#2196F3'}
+      - {name: Primary 700, color: '#1976D2'}
+      - {name: Secondary 500, color: '#FF9800'}
+      - {name: Secondary 700, color: '#F57C00'}
+      - {name: White, color: '#FFFFFF'}
+      - {name: Gray 50, color: '#FAFAFA'}
+      - {name: Gray 100, color: '#F5F5F5'}
+      - {name: Gray 200, color: '#EEEEEE'}
+      - {name: Gray 300, color: '#E0E0E0'}
+      - {name: Gray 600, color: '#757575'}
+      - {name: Gray 800, color: '#424242'}
+      - {name: Gray 900, color: '#212121'}
+      - {name: Black, color: '#000000'}
+  assets:
+  - {name: standard-page.html, content: PGxpbmsgaHJlZj0iaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVJvYm90bzozMDAsNDAwLDUwMCIgcmVsPSJzdHlsZXNoZWV0IiByZWw9InByZWxvYWQiIGFzPSJmb250IiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIj4KCjxkaXYgY2xhc3M9InN0cnVjdHVyZSI+CiAgPGRpdiBjbGFzcz0iYXBwLWJhciIgYW52aWwtZHJvcC1jb250YWluZXI9Ii5hbnZpbC1jb250YWluZXIiIGFudmlsLWRyb3AtcmVkaXJlY3Q9Ii5wbGFjZWhvbGRlciI+CiAgICA8YSBjbGFzcz0ic2lkZWJhci10b2dnbGUiIGFudmlsLWlmLXNsb3QtZW1wdHk9InRvcC1sZWZ0LWJ0biIgYW52aWwtaGlkZS1pZi1zbG90LWVtcHR5PSJsZWZ0LW5hdiIgYW52aWwtZHJvcC1zbG90PSJ0b3AtbGVmdC1idG4iIGhyZWY9ImphdmFzY3JpcHQ6dm9pZCgwKSI+PGkgY2xhc3M9ImZhIGZhLWJhcnMiPjwvaT48L2E+CiAgICA8YSBjbGFzcz0ic2lkZWJhci10b2dnbGUgYW52aWwtZGVzaWduZXItb25seSIgYW52aWwtaWYtc2xvdC1lbXB0eT0idG9wLWxlZnQtYnRuIiBhbnZpbC1pZi1zbG90LWVtcHR5PSJsZWZ0LW5hdiIgYW52aWwtZHJvcC1zbG90PSJ0b3AtbGVmdC1idG4iPjxpIGNsYXNzPSJmYSBmYS1ibGFuayI+PC9pPjwvYT4KICAgIDxkaXYgY2xhc3M9InRvcC1sZWZ0LWJ0biIgYW52aWwtc2xvdD0idG9wLWxlZnQtYnRuIj48L2Rpdj4KICAgIDxkaXYgY2xhc3M9InRpdGxlIiBhbnZpbC1zbG90PSJ0aXRsZSI+CiAgICAgIDxkaXYgY2xhc3M9InBsYWNlaG9sZGVyIGFudmlsLWRlc2lnbmVyLW9ubHkiIGFudmlsLWlmLXNsb3QtZW1wdHk9InRpdGxlIiBhbnZpbC1kcm9wLWhlcmU+RHJvcCB0aXRsZSBoZXJlPC9kaXY+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9ImFwcC1iYXItbmF2IiBhbnZpbC1zbG90PSJuYXYtcmlnaHQiPgogICAgICA8ZGl2IGNsYXNzPSJwbGFjZWhvbGRlciBhbnZpbC1kZXNpZ25lci1vbmx5IiBhbnZpbC1pZi1zbG90LWVtcHR5PSJuYXYtcmlnaHQiIGFudmlsLWRyb3AtaGVyZT5Ecm9wIGEgRmxvd1BhbmVsIGhlcmU8L2Rpdj4KICAgIDwvZGl2PgogICAgPGRpdiBzdHlsZT0iY2xlYXI6Ym90aCI+PC9kaXY+CiAgPC9kaXY+CgogIDxkaXYgY2xhc3M9Im5hdi1ob2xkZXIiPgogICAgPGRpdiBjbGFzcz0ibGVmdC1uYXYgYW52aWwtbWVhc3VyZS10aGlzIiBhbnZpbC1zbG90LXJlcGVhdD0ibGVmdC1uYXYiIGFudmlsLWRyb3AtY29udGFpbmVyPSI+LmFudmlsLWNvbnRhaW5lciI+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9ImxlZnQtbmF2LXBsYWNlaG9sZGVyIGFudmlsLWRlc2lnbmVyLW9ubHkiIGFudmlsLWlmLXNsb3QtZW1wdHk9ImxlZnQtbmF2IiBhbnZpbC1kcm9wLXNsb3Q9ImxlZnQtbmF2Ij4KICAgICAgPGRpdiBjbGFzcz0icHJvbXB0Ij5UbyBhZGQgYSBzaWRlYmFyLCBkcm9wIGEgQ29sdW1uUGFuZWwgaGVyZS48L2Rpdj4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9ImNvbnRlbnQiPgogICAgICA8ZGl2IGFudmlsLXNsb3QtcmVwZWF0PSJkZWZhdWx0IiBjbGFzcz0iYW52aWwtbWVhc3VyZS10aGlzIj48L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0icGxhY2Vob2xkZXIgZHJvcC1oZXJlIiBhbnZpbC1pZi1zbG90LWVtcHR5PSJkZWZhdWx0IiBhbnZpbC1kcm9wLXNsb3Q9ImRlZmF1bHQiPkRyb3AgYSBDb2x1bW5QYW5lbCBoZXJlLjwvZGl2PgogICAgPC9kaXY+CiAgPC9kaXY+CiAgPGRpdiBjbGFzcz0ibmF2LXNoaWVsZCI+PC9kaXY+CjwvZGl2Pgo8ZGl2IGFudmlsLWRyb3AtZGVmYXVsdCBhbnZpbC1kcm9wLXJlZGlyZWN0PSIucGxhY2Vob2xkZXIiIGFudmlsLWRyb3AtY29udGFpbmVyPSIuYW52aWwtY29udGFpbmVyIj48L2Rpdj4KIAo8c2NyaXB0PgogIGZ1bmN0aW9uIGhpZGVTaWRlYmFyKCkgewogICAgdmFyIGxuID0gJCgnLnN0cnVjdHVyZSA+IC5uYXYtaG9sZGVyID4gLmxlZnQtbmF2Jyk7CiAgICBsbi5hbmltYXRlKHtsZWZ0OiAtbG4ub3V0ZXJXaWR0aCgpfSwgZnVuY3Rpb24oKSB7CiAgICAgIGxuLnJlbW92ZUNsYXNzKCJpbi10cmFuc2l0aW9uIHNob3duIikuYWRkQ2xhc3MoImhpZGRlbiIpOwogICAgICAkKCcubmF2LXNoaWVsZCcpLnJlbW92ZUNsYXNzKCJzaG93biIpOwogICAgICAkKHdpbmRvdykudHJpZ2dlcigncmVzaXplJyk7CiAgICB9KTsKICB9CiAgZnVuY3Rpb24gc2hvd1NpZGViYXIoKSB7CiAgICB2YXIgbG4gPSAkKCcuc3RydWN0dXJlID4gLm5hdi1ob2xkZXIgPiAubGVmdC1uYXYnKTsKICAgICQoJy5uYXYtc2hpZWxkJykuYWRkQ2xhc3MoInNob3duIik7CiAgICBsbi5hZGRDbGFzcygic2hvd24iKS5yZW1vdmVDbGFzcygiaGlkZGVuIikuY3NzKHtsZWZ0OiAiLTEwMCUifSkuY3NzKHtsZWZ0OiAtbG4ub3V0ZXJXaWR0aCgpfSkuYW5pbWF0ZSh7bGVmdDogMH0sIGZ1bmN0aW9uKCkgewogICAgICBsbi5yZW1vdmVDbGFzcygiaW4tdHJhbnNpdGlvbiIpOwogICAgfSk7CiAgICAkKHdpbmRvdykudHJpZ2dlcigncmVzaXplJyk7CiAgfQogICQoJy5zaWRlYmFyLXRvZ2dsZSwgLm5hdi1zaGllbGQnKS5vZmYoJ2NsaWNrJykub24oJ2NsaWNrJywgZnVuY3Rpb24oKSB7CiAgICB2YXIgbG4gPSAkKCcuc3RydWN0dXJlID4gLm5hdi1ob2xkZXIgPiAubGVmdC1uYXYnKTsKICAgIGlmIChsbi5pcygiOnZpc2libGUiKSB8fCAkKCcubmF2LXNoaWVsZCcpLmlzKCIuc2hvd24iKSkgewogICAgICBoaWRlU2lkZWJhcigpOwogICAgfSBlbHNlIGlmKCFsbi5pcygiOmVtcHR5IikpIHsKICAgICAgc2hvd1NpZGViYXIoKTsKICAgIH0KICB9KTsKICAkKCcubGVmdC1uYXYnKS5vZmYoJ2NsaWNrJykub24oJ2NsaWNrJywgJ2EsIGJ1dHRvbicsIGZ1bmN0aW9uKCkgewogICAgaWYgKCQoJy5uYXYtc2hpZWxkJykuaXMoIjp2aXNpYmxlIikpIHsKICAgICAgJCgnLm5hdi1zaGllbGQnKS50cmlnZ2VyKCdjbGljaycpOwogICAgfQogIH0pOwo8L3NjcmlwdD4=}
+  - {name: theme.css, content: LyoqCiBUaGlzIENTUyBpbXBsZW1lbnRzIHRoZSBNYXRlcmlhbCBEZXNpZ24gbG9vayBhbmQgZmVlbCBmb3IgQW52aWwgYXBwcy4KICoqLwoKLyogU3RvcCBwYW5lbC1jb2xzIGN1dHRpbmcgb2ZmIGRyb3Agc2hhZG93cyAqLwouYW52aWwtcGFuZWwtY29sIHsKICBwYWRkaW5nLWJvdHRvbTogMTBweDsKICBtYXJnaW4tYm90dG9tOiAtMTBweDsKfQoKLmNvbnRlbnQgPiAucGxhY2Vob2xkZXIgewogIG1hcmdpbjogMTZweDsKICBjb2xvcjogIzg4ODsKICBmb250LXNpemU6IDE4cHg7CiAgb3V0bGluZTogMXB4IGRvdHRlZDsKICBwYWRkaW5nOiAxNnB4OwogIHRleHQtYWxpZ246IGNlbnRlcjsKfQoKLyogUHV0IHRoaW5ncyBvbiBhIDRweCBncmlkIChub25lIG9mIHRoaXMgN3B4IG5vbnNlbnNlKSAqLwouaGFzLXRleHQgLmFudmlsLWNvbXBvbmVudC1pY29uLmxlZnQtaWNvbiB7IG1hcmdpbi1yaWdodDogOHB4OyB9Ci5oYXMtdGV4dCAuYW52aWwtY29tcG9uZW50LWljb24ucmlnaHQtaWNvbiB7IG1hcmdpbi1sZWZ0OiA4cHg7IH0KCmE+LmFudmlsLWNvbXBvbmVudC1pY29uLmxlZnRfZWRnZS1pY29uLAphPi5hbnZpbC1jb21wb25lbnQtaWNvbi5yaWdodF9lZGdlLWljb24sCi5hbnZpbC1sYWJlbD4uYW52aWwtY29tcG9uZW50LWljb24ubGVmdF9lZGdlLWljb24sCi5hbnZpbC1sYWJlbD4uYW52aWwtY29tcG9uZW50LWljb24ucmlnaHRfZWRnZS1pY29uIHsKICBwYWRkaW5nLXRvcDogOHB4OwogIHBhZGRpbmctYm90dG9tOiA4cHg7Cn0KLmFudmlsLWxhYmVsPi5sYWJlbC10ZXh0LCBhPi5saW5rLXRleHQgewogIHBhZGRpbmctdG9wOiA4cHg7CiAgcGFkZGluZy1ib3R0b206IDhweDsKfQouZmlsZS1sb2FkZXI+bGFiZWwgewogICAgcGFkZGluZzogOHB4Owp9Ci5jaGVja2JveCBsYWJlbCwgLnJhZGlvIGxhYmVsIHsKICAgIHBhZGRpbmctdG9wOiA4cHg7IHBhZGRpbmctcmlnaHQ6IDhweDsgcGFkZGluZy1ib3R0b206IDhweDsKfQouYW52aWwtc3BhY2luZy1hYm92ZS1ub25lIHsgbWFyZ2luLXRvcDogMHB4OyB9Ci5hbnZpbC1zcGFjaW5nLWFib3ZlLXNtYWxsIHsgbWFyZ2luLXRvcDogNHB4OyB9Ci5hbnZpbC1zcGFjaW5nLWFib3ZlLW1lZGl1bSB7IG1hcmdpbi10b3A6IDhweDsgfQouYW52aWwtc3BhY2luZy1hYm92ZS1sYXJnZSB7IG1hcmdpbi10b3A6IDE2cHg7IH0KLmFudmlsLXNwYWNpbmctYmVsb3ctbm9uZSB7IG1hcmdpbi1ib3R0b206IDBweDsgfQouYW52aWwtc3BhY2luZy1iZWxvdy1zbWFsbCB7IG1hcmdpbi1ib3R0b206IDRweDsgfQouYW52aWwtc3BhY2luZy1iZWxvdy1tZWRpdW0geyBtYXJnaW4tYm90dG9tOiA4cHg7IH0KLmFudmlsLXNwYWNpbmctYmVsb3ctbGFyZ2UgeyBtYXJnaW4tYm90dG9tOiAxNnB4OyB9CgoKLmNvbC1wYWRkaW5nLmNvbC1wYWRkaW5nLXRpbnkgeyBwYWRkaW5nOiAwIDJweDsgfQouY29sdW1uLXBhbmVsLmNvbC1wYWRkaW5nLXRpbnkgPiAuYW52aWwtcGFuZWwtc2VjdGlvbiA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWNvbnRhaW5lciA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWd1dHRlciB7IG1hcmdpbjogMCAtMnB4OyB9CgouY29sLXBhZGRpbmcuY29sLXBhZGRpbmctc21hbGwgeyBwYWRkaW5nOiAwIDRweDsgfQouY29sdW1uLXBhbmVsLmNvbC1wYWRkaW5nLXNtYWxsID4gLmFudmlsLXBhbmVsLXNlY3Rpb24gPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1jb250YWluZXIgPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1ndXR0ZXIgeyBtYXJnaW46IDAgLTRweDsgfQoKLmNvbC1wYWRkaW5nLmNvbC1wYWRkaW5nLW1lZGl1bSB7IHBhZGRpbmc6IDAgOHB4OyB9Ci5jb2x1bW4tcGFuZWwuY29sLXBhZGRpbmctbWVkaXVtID4gLmFudmlsLXBhbmVsLXNlY3Rpb24gPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1jb250YWluZXIgPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1ndXR0ZXIgeyBtYXJnaW46IDAgLThweDsgfQoKLmNvbC1wYWRkaW5nLmNvbC1wYWRkaW5nLWxhcmdlIHsgcGFkZGluZzogMCAxMnB4OyB9Ci5jb2x1bW4tcGFuZWwuY29sLXBhZGRpbmctbGFyZ2UgPiAuYW52aWwtcGFuZWwtc2VjdGlvbiA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWNvbnRhaW5lciA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWd1dHRlciB7IG1hcmdpbjogMCAtMTJweDsgfQoKLmNvbC1wYWRkaW5nLmNvbC1wYWRkaW5nLWh1Z2UgeyBwYWRkaW5nOiAwIDIwcHg7IH0KLmNvbHVtbi1wYW5lbC5jb2wtcGFkZGluZy1odWdlID4gLmFudmlsLXBhbmVsLXNlY3Rpb24gPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1jb250YWluZXIgPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1ndXR0ZXIgeyBtYXJnaW46IDAgLTIwcHg7IH0KCi5mbG93LXBhbmVsLmZsb3ctc3BhY2luZy10aW55ID4gLmZsb3ctcGFuZWwtZ3V0dGVyIHsgbWFyZ2luOiAwIC0ycHg7IH0KLmZsb3ctcGFuZWwuZmxvdy1zcGFjaW5nLXRpbnkgPiAuZmxvdy1wYW5lbC1ndXR0ZXIgPiAuZmxvdy1wYW5lbC1pdGVtIHsgbWFyZ2luOiAwIDJweDsgfQoKLmZsb3ctcGFuZWwuZmxvdy1zcGFjaW5nLXNtYWxsID4gLmZsb3ctcGFuZWwtZ3V0dGVyIHsgbWFyZ2luOiAwIC00cHg7IH0KLmZsb3ctcGFuZWwuZmxvdy1zcGFjaW5nLXNtYWxsID4gLmZsb3ctcGFuZWwtZ3V0dGVyID4gLmZsb3ctcGFuZWwtaXRlbSB7IG1hcmdpbjogMCA0cHg7IH0KCi5mbG93LXBhbmVsLmZsb3ctc3BhY2luZy1tZWRpdW0gPiAuZmxvdy1wYW5lbC1ndXR0ZXIgeyBtYXJnaW46IDAgLThweDsgfQouZmxvdy1wYW5lbC5mbG93LXNwYWNpbmctbWVkaXVtID4gLmZsb3ctcGFuZWwtZ3V0dGVyID4gLmZsb3ctcGFuZWwtaXRlbSB7IG1hcmdpbjogMCA4cHg7IH0KCi5mbG93LXBhbmVsLmZsb3ctc3BhY2luZy1sYXJnZSA+IC5mbG93LXBhbmVsLWd1dHRlciB7IG1hcmdpbjogMCAtMTJweDsgfQouZmxvdy1wYW5lbC5mbG93LXNwYWNpbmctbGFyZ2UgPiAuZmxvdy1wYW5lbC1ndXR0ZXIgPiAuZmxvdy1wYW5lbC1pdGVtIHsgbWFyZ2luOiAwIDEycHg7IH0KCi5mbG93LXBhbmVsLmZsb3ctc3BhY2luZy1odWdlID4gLmZsb3ctcGFuZWwtZ3V0dGVyIHsgbWFyZ2luOiAwIC0yMHB4OyB9Ci5mbG93LXBhbmVsLmZsb3ctc3BhY2luZy1odWdlID4gLmZsb3ctcGFuZWwtZ3V0dGVyID4gLmZsb3ctcGFuZWwtaXRlbSB7IG1hcmdpbjogMCAyMHB4OyB9CgoKLyogVHlwb2dyYXBoeSAqLwpib2R5IHsKICBmb250LWZhbWlseTogUm9ib3RvLCBOb3RvLCBBcmlhbCwgc2Fucy1zZXJpZjsKICBmb250LXNpemU6IDE0cHg7CiAgbGluZS1oZWlnaHQ6IDEuNDI4NjsKICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmFmYWZhOwp9CgpAbWVkaWEgcHJpbnQgewogIGJvZHkgewogICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7CiAgfQp9CgphLCBhOmZvY3VzIHsKICB0ZXh0LWRlY29yYXRpb246IG5vbmU7CiAgY29sb3I6ICVjb2xvcjpQcmltYXJ5IDcwMCU7Cn0KCmE6aG92ZXIsIGE6YWN0aXZlIHsKICBjb2xvcjogJWNvbG9yOlByaW1hcnkgNTAwJTsKfQoKLmFudmlsLWxhYmVsIHsKLyogIGZvbnQtc2l6ZTogMTZweDsqLwp9CgouYW52aWwtcm9sZS1zdWJoZWFkaW5nIHsKICBmb250LXNpemU6IDE2cHg7CiAgbGluZS1oZWlnaHQ6IDI0ZHA7Cn0KCi5hbnZpbC1yb2xlLWhlYWRsaW5lIHsKICBmb250LXNpemU6IDI0cHg7CiAgbGluZS1oZWlnaHQ6IDMycHg7Cn0KCi5hbnZpbC1yb2xlLWlucHV0LXByb21wdCB7CiAgZm9udC1zaXplOiAxNnB4OwogIGxpbmUtaGVpZ2h0OiAxLjU7Cn0KCi5hbnZpbC1yb2xlLWRpc3BsYXktNCB7CiAgZm9udC1zaXplOiAxMTJweDsKICBmb250LXdlaWdodDogbGlnaHQ7Cn0KCi5hbnZpbC1yb2xlLXRleHQgewogIGZvbnQtc2l6ZTogMTRweDsKfQouYW52aWwtcm9sZS10ZXh0ID4gLmxhYmVsLXRleHQsIC5hbnZpbC1yb2xlLXRleHQgLmxpbmstdGV4dCB7CiAgcGFkZGluZy10b3A6IDA7CiAgcGFkZGluZy1ib3R0b206IDA7Cn0KCi8qIFBhZ2Ugc3RydWN0dXJlOiBBcHAgYmFyIHdpdGggb3B0aW9uYWwgbGVmdCBuYXYgKi8KLnN0cnVjdHVyZSB7CiAgZGlzcGxheTogZmxleDsKICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwogIG1pbi1oZWlnaHQ6IDEwMHZoOwogIGhlaWdodDogMDsgLyogVG8gbWFrZSBmbGV4LWdyb3cgd29yayBpbiBJRSAqLwp9CgovKiBIb3dldmVyLCB0aGlzIGJyZWFrcyB0aGUgZGVzaWduZXIncyBoZWlnaHQgbWVhc3VyZW1lbnQuIElFIGlzbid0IHN1cHBvcnRlZCBmb3IgdGhlIGRlc2lnbmVyLCBzbyBzZXQgaXQgYmFjay4gKi8KLmRlc2lnbmVyIC5zdHJ1Y3R1cmUgewogIGhlaWdodDogaW5pdGlhbDsKfQoKLmFwcC1iYXIgewogIGZsZXg6IDAgMDsKICBmbGV4LWJhc2lzOiBhdXRvOwogIGZsZXgtYmFzaXM6IGNvbnRlbnQ7Cn0KCi5uYXYtaG9sZGVyIHsKICBmbGV4LWdyb3c6IDE7CiAgb3ZlcmZsb3cteTogYXV0bzsKfQoKLyogTW9iaWxlIGFuZCBkZXNrdG9wIG1hcmdpbnMgZm9yIGNvbnRlbnQgKi8KLmNvbnRlbnQgPiAqID4gLmFudmlsLWNvbnRhaW5lciB7CiAgcGFkZGluZzogOHB4Owp9CgpAbWVkaWEobWluLXdpZHRoOjk5MXB4KSB7CiAgLmNvbnRlbnQgPiAqID4gLmFudmlsLWNvbnRhaW5lciB7CiAgICBwYWRkaW5nOiAxNnB4IDI0cHg7CiAgfQp9CgouY29udGVudCAuYW52aWwtbWVhc3VyZS10aGlzIHsKICBwYWRkaW5nLWJvdHRvbTogMXB4OyAvKiBQcmV2ZW50IG1hcmdpbiBjb2xsYXBzZSBtZXNzaW5nIHVwIGVtYmVkZGluZyAqLwp9CgovKiBBbGxvdyBvdmVyZmxvd3MgdG8gc2hvdyBkcm9wIHNoYWRvd3MgaW4gQ29sdW1uUGFuZWxzCiAgIFRoaXMgY2FuIGNyZWF0ZSB1bndhbnRlZCBzY3JvbGxiYXJzOyB3ZSBjb21wZW5zYXRlIGZvciB0aGlzIGF0IHRoZSB0b3AgbGV2ZWwgd2l0aCAubmF2LWhvbGRlciAuY29udGVudCB7b3ZlcmZsb3cteDogaGlkZGVuO30KKi8KLmFudmlsLWNvbnRhaW5lci1vdmVyZmxvdyB7CiAgb3ZlcmZsb3cteDogdmlzaWJsZTsKICBvdmVyZmxvdy15OiB2aXNpYmxlOwp9CgoKLyogRGVza3RvcDogTmF2IGJhciBwaW5uZWQgKi8KCi5uYXYtaG9sZGVyIHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiByb3c7Cn0KCi5uYXYtaG9sZGVyIC5sZWZ0LW5hdiB7CiAgcG9zaXRpb246IHJlbGF0aXZlOwogIGZsZXgtc2hyaW5rOiAwOwogIG1pbi13aWR0aDogMTYwcHg7CiAgbWF4LXdpZHRoOiA0MDBweDsKfQoKLm5hdi1zaGllbGQgewogIGRpc3BsYXk6IG5vbmU7Cn0KCi8qIE1vYmlsZTogTmF2IGJhciBpcyBhIG1vZGFsIG92ZXJsYXkgKi8KCkBtZWRpYShtYXgtd2lkdGg6OTk4cHgpIHsKICBodG1sOm5vdCguZGVzaWduZXIpIC5uYXYtaG9sZGVyIHsKICAgIGRpc3BsYXk6IGJsb2NrOwogIH0KICBodG1sOm5vdCguZGVzaWduZXIpIC5uYXYtaG9sZGVyIC5sZWZ0LW5hdiB7CiAgICBwb3NpdGlvbjogZml4ZWQ7CiAgICB0b3A6IDA7CiAgICBib3R0b206IDA7CiAgICB3aWR0aDogY2FsYygxMDAlIC0gNTZweCk7CiAgICBtYXgtd2lkdGg6IDM2MHB4OwogICAgei1pbmRleDogMzsKICAgIGJvcmRlci1yaWdodDogbm9uZTsKICAvKiAxNmRwICovIGJveC1zaGFkb3c6IDAgMTZweCAyNHB4IDJweCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDZweCAzMHB4IDVweCByZ2JhKDAsIDAsIDAsIDAuMTIpLCAwIDhweCAxMHB4IC01cHggcmdiYSgwLCAwLCAwLCAwLjIpOwoKICAgIGRpc3BsYXk6IG5vbmU7CiAgICB0cmFuc2l0aW9uOiByaWdodCAwLjVzOwogIH0KICAKICBodG1sOm5vdCguZGVzaWduZXIpIC5uYXYtaG9sZGVyIC5sZWZ0LW5hdi5zaG93biB7CiAgICBkaXNwbGF5OiBibG9jazsKICB9CiAgLm5hdi1zaGllbGQuc2hvd24gewogICAgZGlzcGxheTogYmxvY2s7CiAgICBwb3NpdGlvbjogZml4ZWQ7CiAgICB0b3A6IDA7CiAgICBib3R0b206IDA7CiAgICBsZWZ0OiAwOwogICAgcmlnaHQ6IDA7CiAgICB6LWluZGV4OiAyOwogICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLDAsMCwwLjIpOwogIH0KIH0KCi5uYXYtaG9sZGVyIC5sZWZ0LW5hdiwgLmxlZnQtbmF2LXBsYWNlaG9sZGVyIHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47CiAgYmFja2dyb3VuZDogd2hpdGU7CiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2UwZTBlMDsKICBmb250LXNpemU6IDE0cHg7CiAgZm9udC13ZWlnaHQ6IDUwMDsKICBjb2xvcjogcmdiYSgwLDAsMCwwLjg3KTsKICBvdmVyZmxvdy14OiBoaWRkZW47CiAgb3ZlcmZsb3cteTogYXV0bzsKfQoKLmxlZnQtbmF2LXBsYWNlaG9sZGVyIHsKICBkaXNwbGF5OiBibG9jazsKICBwYWRkaW5nOiA4cHg7CiAgbGluZS1oZWlnaHQ6IDE7CiAgd2lkdGg6IDU4cHg7Cn0KLmxlZnQtbmF2LXBsYWNlaG9sZGVyIC5wcm9tcHQgewogIGRpc3BsYXk6IGlubGluZS1ibG9jazsKICB3aGl0ZS1zcGFjZTogbm93cmFwOwogIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsMCkgcm90YXRlKC05MGRlZykgdHJhbnNsYXRlKC01MCUsMCkgdHJhbnNsYXRlKDE1cHgsMTZweCk7CiAgcGFkZGluZzogMTZweCAxNnB4OwogIGNvbG9yOiAjODg4OwogIG91dGxpbmU6IDFweCBkb3R0ZWQgIzg4ODsKICB2aXNpYmlsaXR5OiBoaWRkZW47Cn0KLmFudmlsLWhpZ2hsaWdodCAubGVmdC1uYXYtcGxhY2Vob2xkZXIgLnByb21wdCB7CiAgdmlzaWJpbGl0eTogdmlzaWJsZTsKfQoKLmxlZnQtbmF2ID4gLmNvbHVtbi1wYW5lbCB7CiAgcGFkZGluZzogMjRweCAwOwp9Ci5sZWZ0LW5hdiA+IC5jb2x1bW4tcGFuZWwgPiAuYW52aWwtcGFuZWwtc2VjdGlvbiA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWNvbnRhaW5lcjpub3QoLmZ1bGwtd2lkdGgtcm93KSB7CiAgbWFyZ2luOiAwIDE2cHg7CiAgd2lkdGg6IGluaXRpYWw7CiAgbWF4LXdpZHRoOiBpbml0aWFsOwogIG92ZXJmbG93LXg6IHZpc2libGU7Cn0KLmxlZnQtbmF2ID4gLmNvbHVtbi1wYW5lbCA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uOmZpcnN0LWNoaWxkID4gLmFudmlsLXBhbmVsLXNlY3Rpb24tY29udGFpbmVyLmZ1bGwtd2lkdGgtcm93IHsKICBtYXJnaW4tdG9wOiAtMjRweDsKfQoubGVmdC1uYXYgPiAuY29sdW1uLXBhbmVsID4gLmFudmlsLXBhbmVsLXNlY3Rpb24gPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1jb250YWluZXIgPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1ndXR0ZXIgPiAuYW52aWwtcGFuZWwtcm93ID4gLmFudmlsLXBhbmVsLWNvbCB7CiAgb3ZlcmZsb3cteDogdmlzaWJsZTsKfQoKLyogTWFrZSBhbGwgdGhlIHNpZGViYXIgaWNvbnMgbG9vayBuaWNlICovCgoubGVmdC1uYXYgLmFudmlsLWNvbXBvbmVudC1pY29uIHsKICBmb250LXNpemU6IDE2MCU7Cn0KCi5sZWZ0LW5hdiAuYW52aWwtY29tcG9uZW50LWljb24ubGVmdC1pY29uIHsKICB3aWR0aDogMDsKICBtYXJnaW4tcmlnaHQ6IDU2cHg7CiAgcG9zaXRpb246IHJlbGF0aXZlOwogIHRvcDogMC4xNWVtOyAgCn0KCi5sZWZ0LW5hdiAuYW52aWwtY29tcG9uZW50LWljb24ubGVmdF9lZGdlLWljb24sIC5sZWZ0LW5hdiAuYW52aWwtY29tcG9uZW50LWljb24ucmlnaHRfZWRnZS1pY29uIHsKICBsZWZ0OiAxNnB4OwogIHBhZGRpbmctdG9wOiAycHg7CiAgd2lkdGg6IDA7Cn0KCi5sZWZ0LW5hdiAuYW52aWwtY29tcG9uZW50LWljb24ucmlnaHRfZWRnZS1pY29uIHsKICBsZWZ0OiBpbml0aWFsOwogIHJpZ2h0OiAxNnB4OwogIHRvcDogMDsKICBwYWRkaW5nLXRvcDogMnB4Owp9CgovKiBTaWRlYmFyIGxpbmtzIChhbmQgbGFiZWxzIHdpdGggZWRnZSBpY29ucykgZ28gKzE2cHggd2lkZXIKICAgKFRvcC1sZXZlbCBjb2x1bW5zIGluIENvbHVtblBhbmVscyBnZXQgb3ZlcmZsb3cteCB2aXNpYmxlIFtzZWUgYWJvdmVddG8gZW5hYmxlIHRoaXMpCiovCgoubGVmdC1uYXYgYSwgLmxlZnQtbmF2IC5hbnZpbC1sYWJlbC5sZWZ0X2VkZ2UtaWNvbiwgLmxlZnQtbmF2IC5hbnZpbC1sYWJlbC5yaWdodF9lZGdlLWljb24gewogIGNvbG9yOiByZ2JhKDAsMCwwLDAuODcpOwogIG1hcmdpbjogMCAtMTZweDsKICBwYWRkaW5nOiA0cHggMTZweDsKfQoKLmxlZnQtbmF2IC5hbnZpbC1jb21wb25lbnQubGVmdF9lZGdlLWljb24gewogIHBhZGRpbmctbGVmdDogNzJweDsKfQoKLmxlZnQtbmF2IGE6aG92ZXIsIC5sZWZ0LW5hdiAuYW52aWwtcm9sZS1zZWxlY3RlZCB7CiAgY29sb3I6ICVjb2xvcjpQcmltYXJ5IDcwMCU7CiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLDAsMCwuMDgpOwp9CgouZGVzaWduZXIgLm5hdi1ob2xkZXIgLmxlZnQtbmF2IHsKICBtaW4td2lkdGg6IDU2cHg7Cn0KCi5kZXNpZ25lciAubmF2LWhvbGRlciAubGVmdC1uYXYgPiAuYW52aWwtY29tcG9uZW50IHsKICBtaW4td2lkdGg6IDE2MHB4Owp9CgoubmF2LWhvbGRlciAubGVmdC1uYXYgPiAuYW52aWwtY29tcG9uZW50IHsKICBtYXJnaW4tdG9wOiAwOwogIG1hcmdpbi1ib3R0b206IDA7Cn0KCi5uYXYtaG9sZGVyIC5jb250ZW50IHsKICBmbGV4OiAxOwogIG92ZXJmbG93LXg6IGhpZGRlbjsKfQoKLyogQ29tcG9uZW50czogQXBwIEJhciAqLwouYXBwLWJhciB7CiAgbWluLWhlaWdodDogNTZweDsKICBsaW5lLWhlaWdodDogNDBweDsKICBwYWRkaW5nOiAwIDE2cHggMCA3MnB4OwoKICBmb250LXNpemU6IDIwcHg7CiAgZm9udC13ZWlnaHQ6IDUwMDsKICBjb2xvcjogd2hpdGU7CiAgYmFja2dyb3VuZC1jb2xvcjogJWNvbG9yOlByaW1hcnkgNTAwJTsKICAKICB6LWluZGV4OiAxOwogIC8qIDRkcCAqLyBib3gtc2hhZG93OiAwIDRweCA1cHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDFweCAxMHB4IDAgcmdiYSgwLCAwLCAwLCAwLjEyKSwgMCAycHggNHB4IC0xcHggcmdiYSgwLCAwLCAwLCAwLjIpOyAgCn0KCi5hcHAtYmFyIC5hbnZpbC1jb21wb25lbnQgewogIG1hcmdpbi10b3A6IDA7CiAgbWFyZ2luLWJvdHRvbTogMDsKfQoKLmFwcC1iYXIgPiAuc2lkZWJhci10b2dnbGUgeyBkaXNwbGF5OmJsb2NrOyBmbG9hdDpsZWZ0OyAgbWFyZ2luLWxlZnQ6IC02MXB4OyB9Ci5hcHAtYmFyID4gLnRvcC1sZWZ0LWJ0biB7IGZsb2F0OiBsZWZ0OyBtYXJnaW4tbGVmdDogLTYwcHg7IG1hcmdpbi1yaWdodDogLTQwcHg7IH0KLmFwcC1iYXIgPiAudGl0bGUgeyBmbG9hdDogbGVmdDsgfQouYXBwLWJhciA+IC50aXRsZSA+IC5wbGFjZWhvbGRlciB7IG91dGxpbmU6IDFweCBkb3R0ZWQ7IHBhZGRpbmctbGVmdDogMTZweDsgcGFkZGluZy1yaWdodDogMTZweDsgbWFyZ2luOiA4cHggOHB4IDA7IGRpc3BsYXk6bm9uZTsgfQouYXBwLWJhciA+IC5hcHAtYmFyLW5hdiB7IGZsb2F0OiByaWdodDsgZm9udC13ZWlnaHQ6IG5vcm1hbDsgfQouYXBwLWJhciA+IC5hcHAtYmFyLW5hdiAucGxhY2Vob2xkZXIgeyBtYXJnaW4tdG9wOiA4cHg7IHBhZGRpbmc6IDAgOHB4OyB9Ci5hbnZpbC1oaWdobGlnaHQgLmFwcC1iYXIgPiAuYXBwLWJhci1uYXYgLnBsYWNlaG9sZGVyIHsgb3V0bGluZTogMXB4IGRvdHRlZCAjY2NjOyB9Ci5hbnZpbC1oaWdobGlnaHQgLmFwcC1iYXIgPiAudGl0bGUgPiAucGxhY2Vob2xkZXIgeyBkaXNwbGF5OmJsb2NrOyB9CgouYXBwLWJhciBhLCAuYXBwLWJhciAuYW52aWwtY29tcG9uZW50IHsKICBkaXNwbGF5OiBibG9jazsKICBjb2xvcjogd2hpdGU7CiAgbGluZS1oZWlnaHQ6IDMwcHg7CiAgbWluLXdpZHRoOiAzMHB4OwogIG1pbi1oZWlnaHQ6IDMwcHg7CiAgbWFyZ2luOiA1cHggNHB4IDA7Cn0KCi5hcHAtYmFyIC50aXRsZSAuYW52aWwtY29tcG9uZW50IHsKICBtYXJnaW4tbGVmdDogMDsKfQoKLmFwcC1iYXIgaW5wdXQuYW52aWwtY29tcG9uZW50LCAuYXBwLWJhciAuYW52aWwtY29tcG9uZW50IGlucHV0IHsKICBsaW5lLWhlaWdodDogMzBweDsKICBjb2xvcjogd2hpdGU7Cn0KCi5hcHAtYmFyIHNlbGVjdC5mb3JtLWNvbnRyb2wgewogIGhlaWdodDogNDNweDsgLyogMzBweCBsaW5lIGhlaWdodCArIDEycHggcGFkZGluZyArIDFweCBib3JkZXIgKi8KfQoKLmFwcC1iYXIgLmFudmlsLWNvbXBvbmVudC1pY29uLXByZXNlbnQgLmFudmlsLWNvbXBvbmVudC1pY29uLCAuYXBwLWJhciAuc2lkZWJhci10b2dnbGUgLmZhIHsKICB3aWR0aDogMzBweDsKICB0ZXh0LWFsaWduOiBjZW50ZXI7Cn0KCi8qIERvbid0IHB1dCBzcGFjaW5nIG9uIHRoZSB0b3AtbGV2ZWwgY29udGFpbmVyIChlZyBGbG93UGFuZWwpICovCi5hcHAtYmFyLW5hdiA+IC5hbnZpbC1jb250YWluZXIgewogIG1hcmdpbjogMDsKICBwYWRkaW5nOiAwOwogIG1pbi1oZWlnaHQ6IDU2cHg7Cn0KCi5hbnZpbC1oaWdobGlnaHQgLmFwcC1iYXItbmF2ID4gLmFudmlsLWNvbnRhaW5lcjpub3QoLmhhcy1jb21wb25lbnRzKTpub3QoYSkgewogIG91dGxpbmU6IDFweCBkb3R0ZWQgI2ZmZjsKICBtYXJnaW4tdG9wOiA4cHg7CiAgbWluLWhlaWdodDogNDBweDsKICBwYWRkaW5nOiA1cHggOHB4Owp9CgouYW52aWwtaGlnaGxpZ2h0IC5hcHAtYmFyLW5hdiA+IC5hbnZpbC1jb250YWluZXI6bm90KC5oYXMtY29tcG9uZW50cyk6bm90KGEpOjphZnRlciB7ICAKICBjb250ZW50OiAiRHJvcCBMaW5rcyBoZXJlIgp9CgovKiBSZWppZyBtYXJnaW4gdnMgcGFkZGluZyB0byBnaXZlIGxpbmtzIHRoZSBoYWxvICovCi5hcHAtYmFyIGEsIC5hcHAtYmFyIGEuYW52aWwtY29tcG9uZW50IHsKICBwYWRkaW5nOiA1cHg7CiAgbWFyZ2luOiA4cHggMCAwOwogIGJvcmRlci1yYWRpdXM6IDIwcHg7Cn0KCi5hcHAtYmFyIGEgLmxpbmstdGV4dCB7CiAgcGFkZGluZzogMCA0cHg7Cn0KLmFwcC1iYXIgYS5oYXMtdGV4dCAuYW52aWwtY29tcG9uZW50LWljb24ubGVmdCB7CiAgbWFyZ2luLXJpZ2h0OiA0cHg7Cn0KLmFwcC1iYXIgYS5oYXMtdGV4dCAuYW52aWwtY29tcG9uZW50LWljb24ucmlnaHQgewogIG1hcmdpbi1sZWZ0OiA0cHg7Cn0KCi5hcHAtYmFyIGE6aG92ZXIsIC5hcHAtYmFyIGE6YWN0aXZlIHsKICBjb2xvcjogI2VlZTsgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogIGJhY2tncm91bmQtY29sb3I6ICVjb2xvcjpQcmltYXJ5IDcwMCU7Cn0KCgovKiBDb21wb25lbnQ6IERpYWxvZyAoYWxlcnQpLCBOb3RpZmljYXRpb24gKi8KLm1vZGFsLWNvbnRlbnQsIGJvZHk+ZGl2W2RhdGEtbm90aWZ5PSJjb250YWluZXIiXSB7CiAgYm9yZGVyLXJhZGl1czogMnB4OwogIC8qIDI0ZHAgKi8gYm94LXNoYWRvdzogMCA5cHggNDZweCA4cHggcmdiYSgwLCAwLCAwLCAwLjE0KSwgMCAxMXB4IDE1cHggLTdweCByZ2JhKDAsIDAsIDAsIDAuMTIpLCAwIDI0cHggMzhweCAzcHggcmdiYSgwLCAwLCAwLCAwLjIpCiAgICAhaW1wb3J0YW50Owp9CgoubW9kYWwtaGVhZGVyIHsKICBwYWRkaW5nOiAyNHB4IDI0cHggMHB4OwogIGZvbnQtc2l6ZTogMjRweDsKICBsaW5lLWhlaWdodDogMzJweDsKICBib3JkZXI6IDA7Cn0KCi5tb2RhbC1ib2R5IHsKICBwYWRkaW5nOiAyMHB4IDI0cHggMjRweDsKICBmb250LXNpemU6IDE2cHg7CiAgY29sb3I6ICM3NDc0NzQ7Cn0KCi5tb2RhbC1mb290ZXIgewogIHBhZGRpbmc6IDhweCA4cHggOHB4IDI0cHg7CiAgYm9yZGVyOiAwOwp9CgoubW9kYWwtZm9vdGVyIC5idG4gewogIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50OwogIGNvbG9yOiAlY29sb3I6UHJpbWFyeSA1MDAlOwp9Ci5tb2RhbC1mb290ZXIgLmJ0biwgLm1vZGFsLWZvb3RlciAuYnRuOmZvY3VzLCAubW9kYWwtZm9vdGVyIC5idG46YWN0aXZlIHsKICBib3gtc2hhZG93OiBub25lOwogIHRvcDogMDsKfQoKLyogTm90aWZpY2F0aW9ucyAqLwpib2R5PmRpdltkYXRhLW5vdGlmeT0iY29udGFpbmVyIl0gewogIGJhY2tncm91bmQ6IHdoaXRlOwogIGJvcmRlcjogbm9uZTsKICBwYWRkaW5nOiAyNHB4Owp9Cgpib2R5PmRpdltkYXRhLW5vdGlmeT0iY29udGFpbmVyIl0+c3BhbltkYXRhLW5vdGlmeT0idGl0bGUiXSB7CiAgZGlzcGxheTogYmxvY2s7CiAgZm9udC1zaXplOiAxOHB4OwogIGZvbnQtd2VpZ2h0OiA1MDA7CiAgY29sb3I6ICMzMzMzMzM7Cn0KCmJvZHk+ZGl2W2RhdGEtbm90aWZ5PSJjb250YWluZXIiXT5zcGFuW2RhdGEtbm90aWZ5PSJtZXNzYWdlIl0gewogIGRpc3BsYXk6IGJsb2NrOwogIHBhZGRpbmc6IDIwcHggMCAwOwogIGZvbnQtc2l6ZTogMTZweDsKICBjb2xvcjogIzc0NzQ3NDsgIAp9Cgpib2R5PmRpdltkYXRhLW5vdGlmeT0iY29udGFpbmVyIl0uYWxlcnQtc3VjY2Vzc3sKICBiYWNrZ3JvdW5kLWNvbG9yOiAjZDRlZGRhOwp9Cgpib2R5PmRpdltkYXRhLW5vdGlmeT0iY29udGFpbmVyIl0uYWxlcnQtc3VjY2Vzcz5zcGFuW2RhdGEtbm90aWZ5PSJ0aXRsZSJdewogIGNvbG9yOiAjMTU1NzI0Owp9Cgpib2R5PmRpdltkYXRhLW5vdGlmeT0iY29udGFpbmVyIl0uYWxlcnQtZGFuZ2VyewogIGJhY2tncm91bmQtY29sb3I6ICNmOGQ3ZGE7Cn0KCmJvZHk+ZGl2W2RhdGEtbm90aWZ5PSJjb250YWluZXIiXS5hbGVydC1kYW5nZXI+c3BhbltkYXRhLW5vdGlmeT0idGl0bGUiXXsKICBjb2xvcjogIzcyMWMyNDsKfQoKYm9keT5kaXZbZGF0YS1ub3RpZnk9ImNvbnRhaW5lciJdLmFsZXJ0LXdhcm5pbmd7CiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjNjZDsKfQoKYm9keT5kaXZbZGF0YS1ub3RpZnk9ImNvbnRhaW5lciJdLmFsZXJ0LXdhcm5pbmc+c3BhbltkYXRhLW5vdGlmeT0idGl0bGUiXXsKICBjb2xvcjogIzg1NjQwNDsKfQoKCi8qIENvbXBvbmVudDogQnV0dG9uICovCgouYnRuLCAuYnRuLWRlZmF1bHQsIC5maWxlLWxvYWRlcj5sYWJlbCB7CiAgYm9yZGVyLXJhZGl1czogMnB4OwogIGZvbnQtc2l6ZTogMTRweDsKICBmb250LXdlaWdodDogNTAwOwogIHBhZGRpbmc6IDhweCAxNnB4OwogIG1pbi1oZWlnaHQ6IGNhbGMoMTZweCArIDEuNDI4NTcxNDNlbSk7CiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKCiAgYm9yZGVyOiAwOwogIGJhY2tncm91bmQtaW1hZ2U6IG5vbmU7CiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7CiAgY29sb3I6ICVjb2xvcjpQcmltYXJ5IDUwMCU7CiAgdGV4dC1zaGFkb3c6IG5vbmU7CiAgYm94LXNoYWRvdzogbm9uZTsKICAtd2Via2l0LWJveC1zaGFkb3c6IG5vbmU7CiAgCiAgcG9zaXRpb246IHJlbGF0aXZlOwp9CgouYnRuOmhvdmVyLCAuYnRuOmZvY3VzLCAuZmlsZS1sb2FkZXI+bGFiZWw6aG92ZXIgewogIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMTUzLDE1MywxNTMsMC4yKTsKICBiYWNrZ3JvdW5kLWltYWdlOiBub25lOwogIG91dGxpbmU6IG5vbmU7CiAgY29sb3I6ICVjb2xvcjpQcmltYXJ5IDUwMCU7Cn0KCi5idG46YWN0aXZlLCAuYnRuOmFjdGl2ZTpmb2N1cyB7CiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgxNTMsMTUzLDE1MywwLjQpOwogIGJhY2tncm91bmQtaW1hZ2U6IG5vbmU7CiAgb3V0bGluZTogbm9uZTsKICBib3gtc2hhZG93OiBub25lOwogIGNvbG9yOiAlY29sb3I6UHJpbWFyeSA1MDAlOwp9CgouYnRuW2Rpc2FibGVkXSB7IGNvbG9yOiByZ2JhKDAsIDAsIDAsIC4yNSk7IH0KLmFudmlsLXJvbGUtcmFpc2VkID4gLmJ0bltkaXNhYmxlZF0sIC5hbnZpbC1yb2xlLXByaW1hcnktY29sb3IgPiAuYnRuW2Rpc2FibGVkXSwgLmFudmlsLXJvbGUtc2Vjb25kYXJ5LWNvbG9yID4gLmJ0bltkaXNhYmxlZF0gewogIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwwLDAsMC4xMikgIWltcG9ydGFudDsKICBjb2xvcjogcmdiYSgwLDAsMCwwLjI1KSAhaW1wb3J0YW50OwogIGJveC1zaGFkb3c6IG5vbmUgIWltcG9ydGFudDsKfQoKLmFudmlsLXJvbGUtcmFpc2VkID4gLmJ0biwgLmFudmlsLXJvbGUtcHJpbWFyeS1jb2xvciA+IC5idG4sIC5hbnZpbC1yb2xlLXNlY29uZGFyeS1jb2xvciA+IC5idG4sIC5hbnZpbC1yb2xlLXJhaXNlZC5maWxlLWxvYWRlcj5sYWJlbCwgLmFudmlsLXJvbGUtcHJpbWFyeS1jb2xvci5maWxlLWxvYWRlcj5sYWJlbCwgLmFudmlsLXJvbGUtc2Vjb25kYXJ5LWNvbG9yLmZpbGUtbG9hZGVyPmxhYmVsLAouYnRuLXByaW1hcnksIC5idG4tc3VjY2VzcywgLmJ0bi1pbmZvLCAuYnRuLXdhcm5pbmcsIC5idG4tZGFuZ2VyCnsKICAvKiAyZHAgKi8gIGJveC1zaGFkb3c6IDAgMnB4IDJweCAwIHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgM3B4IDFweCAtMnB4IHJnYmEoMCwgMCwgMCwgMC4yKSwgMCAxcHggNXB4IDAgcmdiYSgwLCAwLCAwLCAwLjEyKTsKfQoKLmFudmlsLXJvbGUtcmFpc2VkID4gLmJ0bjphY3RpdmUsIC5hbnZpbC1yb2xlLXByaW1hcnktY29sb3IgPiAuYnRuOmFjdGl2ZSwgLmFudmlsLXJvbGUtc2Vjb25kYXJ5LWNvbG9yID4gLmJ0bjphY3RpdmUsIC5idG4tcHJpbWFyeTphY3RpdmUsCi5idG4tcHJpbWFyeTphY3RpdmUsIC5idG4tc3VjY2VzczphY3RpdmUsIC5idG4taW5mbzphY3RpdmUsIC5idG4td2FybmluZzphY3RpdmUsIC5idG4tZGFuZ2VyOmFjdGl2ZSB7CiAgLyogOGRwICovIGJveC1zaGFkb3c6IDAgOHB4IDEwcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4xNCksIDAgM3B4IDE0cHggMnB4IHJnYmEoMCwgMCwgMCwgMC4xMiksIDAgNXB4IDVweCAtM3B4IHJnYmEoMCwgMCwgMCwgMC4yKTsgIAogIHRvcDogLTFweDsKfQoKLmFudmlsLXJvbGUtcHJpbWFyeS1jb2xvciA+IC5idG4sIC5idG4tcHJpbWFyeSwgLmFudmlsLXJvbGUtcHJpbWFyeS1jb2xvci5maWxlLWxvYWRlcj5sYWJlbCB7CiAgY29sb3I6IHdoaXRlOwogIGJhY2tncm91bmQtY29sb3I6ICVjb2xvcjpQcmltYXJ5IDUwMCU7Cn0KCi5hbnZpbC1yb2xlLXNlY29uZGFyeS1jb2xvciA+IC5idG4sIC5hbnZpbC1yb2xlLXNlY29uZGFyeS1jb2xvci5maWxlLWxvYWRlcj5sYWJlbCB7CiAgY29sb3I6IHdoaXRlOwogIGJhY2tncm91bmQtY29sb3I6ICVjb2xvcjpTZWNvbmRhcnkgNTAwJTsKfQoKLmJ0bi1zdWNjZXNzLCAuYnRuLWluZm8sIC5idG4td2FybmluZywgLmJ0bi1kYW5nZXIgewogIGNvbG9yOiB3aGl0ZTsKfQoKLmFudmlsLXJvbGUtcHJpbWFyeS1jb2xvciA+IC5idG46aG92ZXIsIC5hbnZpbC1yb2xlLXByaW1hcnktY29sb3IgPiAuYnRuOmFjdGl2ZSwgLmFudmlsLXJvbGUtcHJpbWFyeS1jb2xvciA+IC5idG46Zm9jdXMsCi5idG4tcHJpbWFyeTpob3ZlciwgLmJ0bi1wcmltYXJ5OmFjdGl2ZSwgLmJ0bi1wcmltYXJ5OmZvY3VzIHsKICBjb2xvcjogd2hpdGU7CiAgYmFja2dyb3VuZC1jb2xvcjogJWNvbG9yOlByaW1hcnkgNzAwJTsKfQoKLmFudmlsLXJvbGUtc2Vjb25kYXJ5LWNvbG9yID4gLmJ0bjpob3ZlciwgLmFudmlsLXJvbGUtc2Vjb25kYXJ5LWNvbG9yID4gLmJ0bjphY3RpdmUsIC5hbnZpbC1yb2xlLXNlY29uZGFyeS1jb2xvciA+IC5idG46Zm9jdXMgewogIGNvbG9yOiB3aGl0ZTsKICBiYWNrZ3JvdW5kLWNvbG9yOiAlY29sb3I6U2Vjb25kYXJ5IDcwMCU7Cn0KCi8qIENvbXBvbmVudDogQ2FyZCAqLwoKLmFudmlsLXJvbGUtY2FyZCB7CiAgb3ZlcmZsb3c6IGhpZGRlbjsKICBib3JkZXItcmFkaXVzOiAycHg7CiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7CiAgcGFkZGluZzogOHB4IDEycHg7CiAgLyogMmRwICovICBib3gtc2hhZG93OiAwIDJweCAycHggMCByZ2JhKDAsIDAsIDAsIDAuMTQpLCAwIDNweCAxcHggLTJweCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgMXB4IDVweCAwIHJnYmEoMCwgMCwgMCwgMC4xMik7Cn0KCi8qIGZ1bGxfd2lkdGhfcm93IHNlY3Rpb25zIGdvIGZ1bGwgYmxlZWQgKi8KLmNvbHVtbi1wYW5lbC5hbnZpbC1yb2xlLWNhcmQgPiAuYW52aWwtcGFuZWwtc2VjdGlvbiA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWNvbnRhaW5lci5mdWxsLXdpZHRoLXJvdyB7CiAgbWFyZ2luLWxlZnQ6IC0xMnB4OwogIG1hcmdpbi1yaWdodDogLTEycHg7CiAgd2lkdGg6IGluaXRpYWw7CiAgbWF4LXdpZHRoOiBpbml0aWFsOwp9CgovKiBJZiB0aGUgZmlyc3Qgcm93IG9mIGEgY2FyZCBpcyBhIGZ1bGxfd2lkdGhfcm93LCBpdCBnb2VzIHRvIHRoZSB0b3AgKi8KLmNvbHVtbi1wYW5lbC5hbnZpbC1yb2xlLWNhcmQgPiAuYW52aWwtcGFuZWwtc2VjdGlvbjpmaXJzdC1jaGlsZCA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uLWNvbnRhaW5lci5mdWxsLXdpZHRoLXJvdyB7CiAgbWFyZ2luLXRvcDogLThweDsKfQouY29sdW1uLXBhbmVsLmFudmlsLXJvbGUtY2FyZCA+IC5hbnZpbC1wYW5lbC1zZWN0aW9uOmxhc3QtY2hpbGQgPiAuYW52aWwtcGFuZWwtc2VjdGlvbi1jb250YWluZXIuZnVsbC13aWR0aC1yb3cgewogIG1hcmdpbi1ib3R0b206IC04cHg7Cn0KCgoKLyogQ29tcG9uZW50OiBUZXh0Qm94ICsgVGV4dEFyZWEgKi8KCmlucHV0LmFudmlsLWNvbXBvbmVudCwgdGV4dGFyZWEuYW52aWwtY29tcG9uZW50LCAuYW52aWwtY29tcG9uZW50IHNlbGVjdCwgLmFudmlsLWRhdGVwaWNrZXIgaW5wdXQgewogIGZvbnQtc2l6ZTogMTZweDsKICBsaW5lLWhlaWdodDogMS41OwogIGJvcmRlci1yYWRpdXM6IDA7CiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7CiAgY29sb3I6IHJnYmEoMCwwLDAsMC44Nyk7CiAgCiAgYm94LXNoYWRvdzogbm9uZTsKfQoKLmFudmlsLWRyb3Bkb3duIHsKICBmb250LXNpemU6IDE2cHg7Cn0KLmFudmlsLWNvbXBvbmVudCBzZWxlY3QgewogIGZvbnQtc2l6ZTogaW5oZXJpdDsKfQoKaW5wdXQuYW52aWwtY29tcG9uZW50LCAuYW52aWwtY29tcG9uZW50IHNlbGVjdCwgLmFudmlsLWRhdGVwaWNrZXIgaW5wdXQgewogIHBhZGRpbmc6IDhweCAwIDRweDsKICBib3JkZXI6IDA7CiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMCwwLDAsMC40Mik7CgogIHRyYW5zaXRpb246IGJvcmRlci1ib3R0b20gMC4ycywgcGFkZGluZy1ib3R0b20gMC4yczsKICAtbW96LXRyYW5zaXRpb246IG5vbmU7IC8qIEZpcmVmb3ggaXMganVtcHksIHNvIGRpc2FibGUgdHJhbnNpdGlvbnMgKi8KfQoKdGV4dGFyZWEuYW52aWwtY29tcG9uZW50IHsKICBwYWRkaW5nOiA0cHggOHB4OwogIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMCwwLDAsMC40Mik7CiAgYm9yZGVyLXJhZGl1czogMnB4OwogIHRyYW5zaXRpb246IGJvcmRlciAwLjJzLCBwYWRkaW5nIDAuMnM7CiAgLW1vei10cmFuc2l0aW9uOiBub25lOyAvKiBGaXJlZm94IGlzIGp1bXB5LCBzbyBkaXNhYmxlIHRyYW5zaXRpb25zICovCn0KCi5hbnZpbC1kcm9wZG93biBzZWxlY3QuZm9ybS1jb250cm9sIHsKICAKICAtd2Via2l0LWFwcGVhcmFuY2U6IG5vbmU7CiAgLW1vei1hcHBlYXJhbmNlOiBub25lOwogIHBhZGRpbmc6IDhweCAyZW0gNHB4IDA7CiAgCiAgLyogZXcgZXcgZXcgLSBzZWxlY3QgZWxlbWVudHMgYXJlIHdlaXJkIGFuZCBkb24ndCBvYmV5IGxpbmUtaGVpZ2h0LCBzbyB3ZSBqdXN0CiAgICAgc2V0IHRoZSBoZWlnaHQgZXhwbGljaXRseS4gVWdoLiAqLwogIGhlaWdodDogY2FsYygxLjVlbSArIDEzcHgpOyAvKiA4cHggKyA0cHggcGFkZGluZyArIDFweCBib3JkZXIgPSAxM3B4ICovCn0KCi5hbnZpbC1kcm9wZG93biB7CiAgcG9zaXRpb246IHJlbGF0aXZlOwp9Ci8qIFNlbGVjdCBhcnJvdyBzdHlsaW5nICovCi5hbnZpbC1kcm9wZG93biBmb3JtOmJlZm9yZSB7CiAgICBjb250ZW50OiAiXDI1QkMiOwogICAgcG9zaXRpb246IGFic29sdXRlOwogICAgcmlnaHQ6IDA7CiAgICBmb250LXNpemU6IDgwJTsKICAgIGxpbmUtaGVpZ2h0OiBjYWxjKDEuOGVtICsgOHB4KTsKICAgIGNvbG9yOiAjNTU1OwogICAgcG9pbnRlci1ldmVudHM6bm9uZTsKICAgIHBhZGRpbmc6IDRweCA0cHg7Cn0KCi5hbnZpbC1jb21wb25lbnQgc2VsZWN0LCAuYW52aWwtZGF0ZXBpY2tlciBpbnB1dCB7IG1hcmdpbi1ib3R0b206IDRweDsgfQppbnB1dC5hbnZpbC1jb21wb25lbnQuYW52aWwtc3BhY2luZy1iZWxvdy1ub25lIHsgbWFyZ2luLWJvdHRvbTogNHB4OyB9CmlucHV0LmFudmlsLWNvbXBvbmVudC5hbnZpbC1zcGFjaW5nLWJlbG93LXNtYWxsIHsgbWFyZ2luLWJvdHRvbTogOHB4OyB9CmlucHV0LmFudmlsLWNvbXBvbmVudC5hbnZpbC1zcGFjaW5nLWJlbG93LW1lZGl1bSB7IG1hcmdpbi1ib3R0b206IDEycHg7IH0KaW5wdXQuYW52aWwtY29tcG9uZW50LmFudmlsLXNwYWNpbmctYmVsb3ctbGFyZ2UgeyBtYXJnaW4tYm90dG9tOiAyMHB4OyB9CgppbnB1dC5hbnZpbC1jb21wb25lbnQ6Oi13ZWJraXQtaW5wdXQtcGxhY2Vob2xkZXIsIHRleHRhcmVhLmFudmlsLWNvbXBvbmVudDo6LXdlYmtpdC1pbnB1dC1wbGFjZWhvbGRlciB7CiAgY29sb3I6IHJnYmEoMCwwLDAsMC41NCk7Cn0KaW5wdXQuYW52aWwtY29tcG9uZW50OjotbW96LXBsYWNlaG9sZGVyLCB0ZXh0YXJlYS5hbnZpbC1jb21wb25lbnQ6Oi1tb3otcGxhY2Vob2xkZXIgewogIGNvbG9yOiByZ2JhKDAsMCwwLDAuNTQpOwp9CmlucHV0LmFudmlsLWNvbXBvbmVudDo6cGxhY2Vob2xkZXIsIHRleHRhcmVhLmFudmlsLWNvbXBvbmVudDo6cGxhY2Vob2xkZXIgIHsKICBjb2xvcjogcmdiYSgwLDAsMCwwLjU0KTsKfQoKLmFwcC1iYXIgaW5wdXQuYW52aWwtY29tcG9uZW50Ojotd2Via2l0LWlucHV0LXBsYWNlaG9sZGVyLCAuYXBwLWJhciB0ZXh0YXJlYS5hbnZpbC1jb21wb25lbnQ6Oi13ZWJraXQtaW5wdXQtcGxhY2Vob2xkZXIgewogIGNvbG9yOiByZ2JhKDI1NSwyNTUsMjU1LDAuOCk7Cn0KLmFwcC1iYXIgaW5wdXQuYW52aWwtY29tcG9uZW50OjotbW96LXBsYWNlaG9sZGVyLCAuYXBwLWJhciB0ZXh0YXJlYS5hbnZpbC1jb21wb25lbnQ6Oi1tb3otcGxhY2Vob2xkZXIgewogIGNvbG9yOiByZ2JhKDI1NSwyNTUsMjU1LDAuOCk7Cn0KLmFwcC1iYXIgaW5wdXQuYW52aWwtY29tcG9uZW50OjpwbGFjZWhvbGRlciwgLmFwcC1iYXIgdGV4dGFyZWEuYW52aWwtY29tcG9uZW50OjpwbGFjZWhvbGRlciAgewogIGNvbG9yOiByZ2JhKDI1NSwyNTUsMjU1LDAuOCk7Cn0KCmlucHV0LmFudmlsLWNvbXBvbmVudDpob3ZlciwgLmFudmlsLWNvbXBvbmVudCBzZWxlY3Q6aG92ZXIsIC5hbnZpbC1kYXRlcGlja2VyIGlucHV0OmhvdmVyIHsKICBib3JkZXItYm90dG9tOiAycHggc29saWQgcmdiYSgwLDAsMCwuODcpOwogIHBhZGRpbmctYm90dG9tOiAzcHg7Cn0KCmlucHV0LmFudmlsLWNvbXBvbmVudDpmb2N1cywgLmFudmlsLWNvbXBvbmVudCBzZWxlY3Q6Zm9jdXMsIC5hbnZpbC1kYXRlcGlja2VyIGlucHV0OmZvY3VzIHsKICBib3JkZXItYm90dG9tOiAycHggc29saWQgJWNvbG9yOlByaW1hcnkgNzAwJTsKICBwYWRkaW5nLWJvdHRvbTogM3B4OwogIGJveC1zaGFkb3c6IG5vbmU7Cn0KCmlucHV0LmFudmlsLWNvbXBvbmVudFtkaXNhYmxlZF0sIC5hbnZpbC1jb21wb25lbnQgc2VsZWN0W2Rpc2FibGVkXSwgLmFudmlsLWRhdGVwaWNrZXIgaW5wdXRbZGlzYWJsZWRdIHsKICBib3JkZXItYm90dG9tOiAxcHggZGFzaGVkICM4ODg7CiAgcGFkZGluZy1ib3R0b206IDRweDsKICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDsKfQoKdGV4dGFyZWEuYW52aWwtY29tcG9uZW50OmhvdmVyIHsKICBib3JkZXI6IDJweCBzb2xpZCByZ2JhKDAsMCwwLDAuODcpOwogIHBhZGRpbmc6IDNweCA3cHg7Cn0KCnRleHRhcmVhLmFudmlsLWNvbXBvbmVudDpmb2N1cyB7CiAgYm9yZGVyOiAycHggc29saWQgJWNvbG9yOlByaW1hcnkgNzAwJTsKICBwYWRkaW5nOiAzcHggN3B4OwogIGJveC1zaGFkb3c6IG5vbmU7Cn0KCnRleHRhcmVhLmFudmlsLWNvbXBvbmVudFtkaXNhYmxlZF0gewogIGJvcmRlcjogMXB4IGRhc2hlZCAjODg4OwogIHBhZGRpbmc6IDRweCA4cHg7CiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7Cn0KCi5kYXRlcmFuZ2VwaWNrZXIgdGQuYWN0aXZlIHsKICBiYWNrZ3JvdW5kLWNvbG9yOiAlY29sb3I6UHJpbWFyeSA1MDAlOwp9CgouZGF0ZXJhbmdlcGlja2VyIHRkLmFjdGl2ZTpob3ZlciB7CiAgYmFja2dyb3VuZC1jb2xvcjogJWNvbG9yOlByaW1hcnkgNzAwJTsKfQoKLmRhdGVyYW5nZXBpY2tlciAuYnRuLXN1Y2Nlc3MgewogIGNvbG9yOiAlY29sb3I6UHJpbWFyeSA1MDAlOwp9CgovKiBDb21wb25lbnQ6IENoZWNrQm94LCBSYWRpb0J1dHRvbiAqLwovKiBVZ2guIFRoZXNlIGFyZSBkZWZpbml0ZWx5IFRPRE8gcmlnaHQgbm93LiAqLwoKLmNoZWNrYm94LCAucmFkaW8gewogIGZvbnQtc2l6ZTogMTZweDsKfQoKLyogU2hhZG93IHZhbHVlcyB0YWtlbiBmcm9tIApodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy8zMDUzMzA1NS9jYWxjdWxhdGluZy1zaGFkb3ctdmFsdWVzLWZvci1hbGwtbWF0ZXJpYWwtZGVzaWduLWVsZXZhdGlvbnMKKi8KCg==}
+server_modules: []
+renamed: true

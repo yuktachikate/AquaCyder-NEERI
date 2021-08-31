@@ -1,0 +1,16 @@
+name: AquaCyder
+channels:
+  - conda-forge
+dependencies:
+- numpy
+- rasterio
+- shapely
+- pillow
+- Fiona==1.8.13
+- geopandas==0.6.2
+- scikit-learn
+- lightgbm
+- pip:
+  - eo-learn
+  - overpass
+  - anvil-uplink
